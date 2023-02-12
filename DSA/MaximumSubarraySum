@@ -1,0 +1,19 @@
+//https://www.codingninjas.com/codestudio/problems/630526?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
+
+#include <bits/stdc++.h> 
+long long maxSubarraySum(int arr[], int n)
+{
+      long long int sum=0;
+      long long int maxSum = 0;
+      long long int i=0;
+    while(i<n){
+        sum=sum+arr[i];
+        maxSum=max(maxSum,sum);
+        
+        if(sum<0){
+            sum=0;
+        }
+       i++;
+    } 
+    return maxSum;
+}
